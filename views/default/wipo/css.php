@@ -1,13 +1,13 @@
 <?php
 /**
- * Users Online plugin settings
+ * Wirtschaft und Politik
  *
- * @package users_online
- * @author iionly
- * @copyright iionly 2014
+ * @package wipo
+ * @author Man-fred
+ * @copyright bcss 2015
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
- * @website https://github.com/iionly
- * @email iionly@gmx.de
+ * @website https://github.com/Man-fred
+ * @email wipo@bcss.de
  */
 ?>
 

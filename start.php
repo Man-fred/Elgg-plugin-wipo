@@ -1,13 +1,13 @@
 <?php
 /**
- * Users Online
+ * Wirtschaft und Politik
  *
  * @package wipo
- * @author iionly
- * @copyright iionly 2014
+ * @author Man-fred
+ * @copyright bcss 2015
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
- * @website https://github.com/
- * @email gum@bielemeier.de
+ * @website https://github.com/Man-fred
+ * @email wipo@bcss.de
  */
 
 elgg_register_event_handler('init', 'system', 'game_gum_init');
