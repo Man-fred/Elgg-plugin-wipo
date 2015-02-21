@@ -2,10 +2,10 @@
 /**
  * Users Online
  *
- * Show users who are currently logged in the sidebar
+ * Show a box listing users who are currently logged in at the site at top of page
  * with blue border around users' avatars who are friends of logged in user
  *
- * @package game_gum
+ * @package wipo
  * @author iionly
  * @copyright iionly 2014
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
@@ -14,16 +14,18 @@
  */
 
 // limit number of users to be displayed
-$limit = elgg_get_plugin_setting('user_listing_limit', 'game_gum');
+$limit = elgg_get_plugin_setting('user_listing_limit', 'wipo');
 if (!$limit) {
 	$limit = 20;
 }
 // active users within the last 5 minutes
-$game_gum = find_active_users(array('seconds' => 300, 'limit' => $limit));
+$wipo = find_active_users(array('seconds' => 300, 'limit' => $limit));
 
-$title = elgg_echo('game_gum:online');
-if ($game_gum) {
-	foreach($game_gum as $user) {
+$visitors = "<div><table border='0' class='usersonline' cellspacing='0' cellpadding='0'><tr>";
+$visitors .= "<td class='usersonlinetext'><h3>".elgg_echo('wipo:online')."</h3></td>";
+if($wipo) {
+	$visitors .= "<td>";
+	foreach($wipo as $user) {
 		$spacer_url = elgg_get_site_url() . '_graphics/spacer.gif';
 		$name = htmlspecialchars($user->name, ENT_QUOTES, 'UTF-8', false);
 		$username = $user->username;
@@ -41,19 +43,24 @@ if ($game_gum) {
 			$class = "usersonlineicon";
 		}
 
-		$body .= "<div class='elgg-avatar elgg-avatar-tiny'>";
-		$body .= elgg_view('output/url', array(
+		$visitors .= "<div class='elgg-avatar elgg-avatar-tiny'>";
+		$visitors .= elgg_view('output/url', array(
 			'href' => $user->getURL(),
 			'text' => $icon,
 			'is_trusted' => true,
 			'class' => "elgg-avatar elgg-avatar-tiny $class",
 		));
-		$body .= elgg_view_icon('hover-menu');
-		$body .= elgg_view_menu('user_hover', array('entity' => $user, 'username' => $username, 'name' => $name));
-		$body .= "</div>";
+		$visitors .= elgg_view_icon('hover-menu');
+		$visitors .= elgg_view_menu('user_hover', array('entity' => $user, 'username' => $username, 'name' => $name));
+		$visitors .= "</div>";
+		
 	}
+	$visitors .= "</td>";
 } else {
-	$body = '<p>' . elgg_echo('game_gum:noonline') . '</p>';
+	$visitors .= "<td class='usersonlinetext'>".elgg_echo('wipo:noonline')."</td>";
 }
+$visitors .= "</tr></table></div>";
 
-echo elgg_view_module('aside', $title, $body);
+echo "<div align='center' class='mtm mbm'>";
+echo $visitors;
+echo "</div>";

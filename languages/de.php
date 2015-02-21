@@ -4,7 +4,7 @@
  *
  * German language file
  *
- * @package game_gum
+ * @package wipo
  * @author iionly
  * @copyright iionly 2014
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
@@ -13,12 +13,12 @@
  */
 
 return array(
-	'game_gum:online' => "Online: ",
-	'game_gum:noonline' => " -niemand- ",
+	'wipo:online' => "Online: ",
+	'wipo:noonline' => " -niemand- ",
 
-	'game_gum:settings:user_listing_limit' => 'Wie viele Benutzer sollen maximal angezeigt werden? ',
-	'game_gum:settings:display_option' => 'Wo sollen die derzeit angemeldeten Benutzer angezeigt werden? ',
-	'game_gum:settings:top' => 'am Kopfende des Hauptteils der Seite',
-	'game_gum:settings:sidebar' => 'in der Seitenleiste',
-	'game_gum:settings:both' => 'sowohl am Kopfende der Seite als auch in der Seitenleiste'
+	'wipo:settings:user_listing_limit' => 'Wie viele Benutzer sollen maximal angezeigt werden? ',
+	'wipo:settings:display_option' => 'Wo sollen die derzeit angemeldeten Benutzer angezeigt werden? ',
+	'wipo:settings:top' => 'am Kopfende des Hauptteils der Seite',
+	'wipo:settings:sidebar' => 'in der Seitenleiste',
+	'wipo:settings:both' => 'sowohl am Kopfende der Seite als auch in der Seitenleiste'
 );

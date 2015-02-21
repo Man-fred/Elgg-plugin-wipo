@@ -29,17 +29,17 @@ $params = array(
 	'name' => 'params[display_option]',
 	'value' => $vars['entity']->display_option,
 	'options_values' => array(
-		'top' => elgg_echo('game_gum:settings:top'),
-		'sidebar' => elgg_echo('game_gum:settings:sidebar'),
-		'both' => elgg_echo('game_gum:settings:both'),
+		'top' => elgg_echo('wipo:settings:top'),
+		'sidebar' => elgg_echo('wipo:settings:sidebar'),
+		'both' => elgg_echo('wipo:settings:both'),
 	),
 );
 $dropdown_display_option = elgg_view('input/dropdown', $params);
 
 ?>
 <div>
-	<?php echo elgg_echo('game_gum:settings:user_listing_limit'); ?><br>
+	<?php echo elgg_echo('wipo:settings:user_listing_limit'); ?><br>
 	<?php echo $dropdown_user_listing_limit; ?><br><br>
-	<?php echo elgg_echo('game_gum:settings:display_option'); ?><br>
+	<?php echo elgg_echo('wipo:settings:display_option'); ?><br>
 	<?php echo $dropdown_display_option; ?>
 </div>
